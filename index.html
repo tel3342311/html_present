@@ -1,49 +1,147 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides" >
+			<section data-background-image="./images/bg1.jpg" data-background-size="85%">
+				<H1>HTML </H1>
+				<p>2018/12/06</p>
+				<p>Allen</p>
+			</section>
+			<section data-background-image="./images/bg2.jpg" data-background-size="85%">
+				<p>一個基本的網頁</p>
+				<p>由html包住head與body構成</p>
+				<p data-height="265" data-theme-id="0" data-slug-hash="yQQaGb" data-default-tab="html" data-user="tel3342311" data-pen-title="basic html" class="codepen">See the Pen <a href="https://codepen.io/tel3342311/pen/yQQaGb/">basic html</a> by wei hung sun (<a href="https://codepen.io/tel3342311">@tel3342311</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+				
+			</section>
+			<section>
+				<p>html常會帶一個屬性叫做lang</p>
+				<p>其實就是language的意思</p>
+				<table>
+					<thead>
+						<td>lang值</td>
+						<td>代表語言</td>
+					</thead>
+					<tr>
+						<td>en</td>
+						<td>英文</td>
+					</tr>
+					<tr>
+						<td>zh</td>
+						<td>中文</td>
+					</tr>
+				</table>
+			</section>
+			<section data-background-image="./images/bg2.jpg" data-background-size="85%">
+				<p>head標籤</p>
+				<ul>
+					<li>提供網頁的相關設定</li>
+					<li>編碼、程式碼、樣式、關鍵字</li>
+					<li>是不會顯示出來的</li>
+				</ul>
+			</section>
+			<section data-background-image="./images/bg2.jpg" data-background-size="85%">
+				HTML標籤語法
+				<pre>
+					<code class="hljs" data-trim contenteditable>
+						< 標籤名稱 屬性名稱="值" > 內容 < / 標籤名稱 >
+					</code>
+				</pre>
+			</section>
+			<section data-background-image="./images/bg2.jpg" data-background-size="85%">
+				p標籤
+
+				<pre>
+					<code class="hljs" data-trim="" contenteditable="contenteditable">
+						<p> 
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore nulla odio illum maiores assumenda ut ea minus vel voluptatem, neque voluptates cumque eveniet aliquid harum ducimus est eius! Non, totam.
+						</p>
+					</code>
+				</pre>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore nulla odio illum maiores assumenda ut ea minus
+					vel voluptatem, neque voluptates cumque eveniet aliquid harum ducimus est eius! Non, totam.</p>
+			</section>
+			<section data-background-image="./images/bg2.jpg" data-background-size="85%">
+				img標籤
+				<pre>
+						<code class="hljs" data-trim contenteditable>
+								<img src="網址" alt="替代文字">
+						</code>
+				</pre>
+			</section>
+			<section data-background-image="./images/bg2.jpg" data-background-size="85%">
+				影像
+				<pre>
+					<code class="hljs" data-trim contenteditable>
+						<img src="https://picsum.photos/200/300" width="200" height="300" alt="">
+					</code>
+					</pre>
+
+				<hr>
+				<img src="https://picsum.photos/200" width="200" height="200" alt="">
+
+			</section>
+
+			<section data-background-image="./images/bg2.jpg" data-background-size="85%">
+				<p data-height="300px" data-theme-id="0" data-slug-hash="NEOGKL" data-default-tab="html,result" data-user="tel3342311"
+				 data-pen-title="NEOGKL" class="codepen">See the Pen <a href="https://codepen.io/tel3342311/pen/NEOGKL/">NEOGKL</a>
+					by wei hung sun (<a href="https://codepen.io/tel3342311">@tel3342311</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+				<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+</body>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
 </html>

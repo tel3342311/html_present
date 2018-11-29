@@ -1,0 +1,220 @@
+FORMAT: 1A
+HOST: http://travelcord.iccapp.info/
+
+# Travel Cord Server Api
+
+Travel Cord Server APIs are designed for Mobile APP to upload error logs and update software.
+
+## 1. Register [/api/register]
+
+### http://travelcord.iccapp.info/api/register [POST] 
+
++ Request (application/json)
+
+        {
+            "command": "register",
+            "name":"liteon",
+            "email":"liteoniccapp@gmail.com",
+            "password":"12345"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "command": "register",
+            "status": "Success",
+            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIyMWNjOWJmMDkwOGRlMWQzNTBhOWQ4NTI2YjRkY2I3OWIzMGZmYThmMTAwZmRjOTY5NTcxZmY2OGY5M2FhYmZlOGM0YzA0ZWNlODE3NGIyIn0.eyJhdWQiOiIzIiwianRpIjoiMjIxY2M5YmYwOTA4ZGUxZDM1MGE5ZDg1MjZiNGRjYjc5YjMwZmZhOGYxMDBmZGM5Njk1NzFmZjY4ZjkzYWFiZmU4YzRjMDRlY2U4MTc0YjIiLCJpYXQiOjE1NDE3NTIyMDUsIm5iZiI6MTU0MTc1MjIwNSwiZXhwIjoxNTczMjg4MjA0LCJzdWIiOiIyMSIsInNjb3BlcyI6W119.YwGlk0GCwIMZi1B1mN2c635CgoajpP62aGm61630g8kO-j9lQ20JN3o0OytQ-fSS7JyPu4jdcaK5uESLzbGpMKPzeBdNbCep0AEBSFm15LWlcjBYDwlpe5NNzI6h5GNpMNvo5CokflyVqwyaw4Gub2PxehMQCtMXisw7GyX4kPH31Wgw4jS4GIz8ctIN_lmtgupzgPtOkdBDHnfQnR5Fzg0N022PyAuMVG_4TEdi8MBjaWRo7Qs3m3gdUj8qvyI3y61xJ6ECF-MOv0WkPts8o1gmNpLnC53E7r8EEx69bNnQYRhTVjOSXTO-4ZUkPALhK-GJju-u7sZ59WEGSQKBdCvqWOxEy32Y8tPdQ6twgdcFCs4mo2vhTfFNEQRfRNLgiKkW9dmH-dGuVKrzw8sYfLGxyNE8qm6H9vkE0BNB8iFVs9VkyZaRbb_HLI_7NH0-wC0uzM6mtjr2FdJ0R7TUORBKR6Tt9bYloZkdoeVlzK1bhiOg4i6Byx2-kTKVgMUUnG0A43ZXgakC-Vw8_vg2Q0DgKxvCywIE5pMr0uz6Z5Mq2Als_sU1EnNEPuoIkna7Z8HXplwxkAqajoFu4P-7BFTEUV9_SLMUfOwZKb1VdQw7V9Io2W7vBapihGYky8LGvN_8DEqInipY0l04ST4Li-1GiffQuC-QGBfMTUBXFFM"
+        }
+
++ Response 401 (application/json)
+    
+        {
+            "command": "register",
+            "status": "Failed",
+            "error": "Account alread beed used"
+        }
+        
+## 2. Login [/api/login]
+
+### http://travelcord.iccapp.info/api/login [POST] 
+
++ Request (application/json)
+
+        {
+            "command": "login",
+            "email":"liteoniccapp@gmail.com",
+            "password":"12345"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "command": "login",
+            "status": "Success",
+            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIyMWNjOWJmMDkwOGRlMWQzNTBhOWQ4NTI2YjRkY2I3OWIzMGZmYThmMTAwZmRjOTY5NTcxZmY2OGY5M2FhYmZlOGM0YzA0ZWNlODE3NGIyIn0.eyJhdWQiOiIzIiwianRpIjoiMjIxY2M5YmYwOTA4ZGUxZDM1MGE5ZDg1MjZiNGRjYjc5YjMwZmZhOGYxMDBmZGM5Njk1NzFmZjY4ZjkzYWFiZmU4YzRjMDRlY2U4MTc0YjIiLCJpYXQiOjE1NDE3NTIyMDUsIm5iZiI6MTU0MTc1MjIwNSwiZXhwIjoxNTczMjg4MjA0LCJzdWIiOiIyMSIsInNjb3BlcyI6W119.YwGlk0GCwIMZi1B1mN2c635CgoajpP62aGm61630g8kO-j9lQ20JN3o0OytQ-fSS7JyPu4jdcaK5uESLzbGpMKPzeBdNbCep0AEBSFm15LWlcjBYDwlpe5NNzI6h5GNpMNvo5CokflyVqwyaw4Gub2PxehMQCtMXisw7GyX4kPH31Wgw4jS4GIz8ctIN_lmtgupzgPtOkdBDHnfQnR5Fzg0N022PyAuMVG_4TEdi8MBjaWRo7Qs3m3gdUj8qvyI3y61xJ6ECF-MOv0WkPts8o1gmNpLnC53E7r8EEx69bNnQYRhTVjOSXTO-4ZUkPALhK-GJju-u7sZ59WEGSQKBdCvqWOxEy32Y8tPdQ6twgdcFCs4mo2vhTfFNEQRfRNLgiKkW9dmH-dGuVKrzw8sYfLGxyNE8qm6H9vkE0BNB8iFVs9VkyZaRbb_HLI_7NH0-wC0uzM6mtjr2FdJ0R7TUORBKR6Tt9bYloZkdoeVlzK1bhiOg4i6Byx2-kTKVgMUUnG0A43ZXgakC-Vw8_vg2Q0DgKxvCywIE5pMr0uz6Z5Mq2Als_sU1EnNEPuoIkna7Z8HXplwxkAqajoFu4P-7BFTEUV9_SLMUfOwZKb1VdQw7V9Io2W7vBapihGYky8LGvN_8DEqInipY0l04ST4Li-1GiffQuC-QGBfMTUBXFFM"
+        }
+
++ Response 401 (application/json)
+    
+        {
+            "command": "login",
+            "status": "Failed",
+            "error": "Log in Failed"
+        }
+
+## 3. Forget Password [/api/forget_password]
+
+### http://travelcord.iccapp.info/api/forget_password [POST] 
+
++ Request (application/json)
+
+        { 
+          "command": "forget_password",
+          "email":"liteoniccapp@gmail.com"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "command": "forget_password",
+            "status": "Success",
+            "message": "We have e-mailed your password reset link!"
+        }
+
++ Response 401 (application/json)
+    
+        {
+            "command": "forget_password",
+            "status": "Failed",
+            "message": "We can't find a user with that e-mail address."
+        }
+
+## 4. Upload log [/api/upload_log]
+
+### http://travelcord.iccapp.info/api/upload_log [POST] 
+
++ Request (application/json)
+
+        { 
+          "command": "upload_log",
+          "title": "log file title",
+          "device_id": "device id",
+          "data": "log content"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "command": "upload_log",
+            "status": "Success"
+        }
+
++ Response 401 (application/json)
+    
+        {
+            "command": "upload_log",
+            "status": "Failed",
+            "error": "upload failed"
+        }
+        
+## 5. Download log [/api/download_log]
+
+### http://travelcord.iccapp.info/api/download_log [POST] 
+
++ Request (application/json)
+
+        { 
+          "command": "download_log",
+          "device_id": "device id",
+          "date": "1541756093"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "command": "download_log",
+            "status": "Success",
+            "data": [
+                        {
+                            "device_id": "1122334455",
+                            "content": [
+                                { 
+                                    "title": "log file",
+                                    "url": "https://file.url"
+                                }
+                            ]
+                        },
+                        {
+                            "device_id": "22233344455",
+                            "content": [
+                                { 
+                                    "title": "log file",
+                                    "url": "https://file.url"
+                                }
+                            ]
+                        }
+            ]
+        }
+
++ Response 401 (application/json)
+    
+        {
+            "command": "download_log",
+            "status": "Failed",
+            "error": "download failed"
+        }
+        
+## 6. Get Firmware list [/api/get_firmware_list]
+
+### http://travelcord.iccapp.info/api/get_firmware_list [POST] 
+
++ Request (application/json)
+
+        { 
+          "command": "get_firmware_list"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "command": "get_firmware_list",
+            "status": "Success".
+            "firmware": [ "firmware/0001.frm",
+                               "firmware/0002.frm",]
+        }
+
++ Response 401 (application/json)
+    
+        {
+            "command": "get_firmware_list",
+            "status": "Failed",
+            "error": "Error description"
+        }
+        
+## 7. download Firmware [/api/download_firmware]
+
+### http://travelcord.iccapp.info/api/download_firmware [POST] 
+
++ Request (application/json)
+
+        { 
+          "command": "download_firmware"
+          "firmware_name": "firmware/0001.frm"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "command": "download_firmware",
+            "status": "Success".
+            "firmware": [ "firmware/0001.frm",
+                               "firmware/0002.frm",]
+        }
+
++ Response 401 (application/json)
+    
+        {
+            "command": "download_firmware",
+            "status": "Failed",
+            "error": "No such file"
+        }
